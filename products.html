@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenyan Haven.co - Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    
+    <?php include 'index.html'; ?>
+
+    <header>
+        <nav id="navbar">
+            <div class="logo">Kenyan Haven.co</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    
+
+    <main>
+        <section id="products" class="full-page">
+            <div class="content">
+                <h2>Our Products</h2>
+                <div class="product-category">
+                    <h3>Household Goods</h3>
+                    <p>Kitchenwares, creative tools, beauty-routine essentials, gym equipment, entertainment, and more</p>
+                    <button class="gallery-toggle">View Gallery</button>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="Images/granitesufurias.jpg" alt="granite sufurias">
+                            <p> Granite sufurias<br>$29.99</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="Images/ElectricPressurecooker.jpg" alt="Electric Pressure cooker">
+                            <p>Electric Pressure Cooker<br>$39.99</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="Images/foodbox.jpg" alt="Food box">
+                            <p>17 set Food box<br>$49.99</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="household4.jpg" alt="Bedding Set">
+                            <p>Bedding Set<br>$79.99</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="household5.jpg" alt="Bathroom Accessories">
+                            <p>Bathroom Accessories<br>$34.99</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="household6.jpg" alt="Kitchen Appliance Set">
+                            <p>Kitchen Appliance Set<br>$149.99</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-category">
+                    <h3>Artworks</h3>
+                    <p>Unique and creative artworks</p>
+                    <button class="gallery-toggle">View Gallery</button>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="artwork1.jpg" alt="Abstract Painting">
+                            <p>Abstract Painting<br>$199.99</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="artwork2.jpg" alt="Sculpture">
+                            <p>Sculpture<br>$299.99</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="artwork3.jpg" alt="Photography Print">
+                            <p>Photography Print<br>$79.99</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="artwork4.jpg" alt="Handmade Pottery">
+                            <p>Handmade Pottery<br>$129.99</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="artwork5.jpg" alt="Wall Hanging">
+                            <p>Wall Hanging<br>$89.99</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="artwork6.jpg" alt="Glass Art">
+                            <p>Glass Art<br>$159.99</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-category">
+                    <h3>Electronics</h3>
+                    <p>Phones, dispensers, accessories (headphones, etc.)</p>
+                    <button class="gallery-toggle">View Gallery</button>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="Images/AirConditioner.jpg" alt="Air Conditioner">
+                            <p>Air Conditioner<br>$499.99</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="Images/SoundSystem.jpg" alt="Sound System">
+                            <p>Sound System<br>$79.99</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="Images/S9colouredwatch.jpg" alt="Smart Watch">
+                            <p>Coloured Watch<br>$199.99</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="Images/SingledoorFridge.jpg" alt="Fridge">
+                            <p>Single door Fridge<br>$89.99</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="Images/tablet.jpg" alt="Tablet">
+                            <p>Tablet<br>$299.99</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="Images/PowerBank.jpg" alt="Power Bank">
+                            <p>Power Bank<br>$39.99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </main>
+
+    <footer>
+        <p>&copy; 2024 Kenyan Haven.co. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        fetch('index.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                
+                if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+                    document.querySelector('.back-button').style.display = 'none';
+                }
+            });
+    </script>
+</body>
+</html>

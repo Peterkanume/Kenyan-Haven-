@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenyan Haven.co - About</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+   
+    <?php include 'index.html'; ?>
+
+    <header>
+        <nav id="navbar">
+            <div class="logo">Kenyan Haven.co</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    
+
+    <main>
+        <section id="about" class="full-page">
+            <div class="content">
+                <h2>About Us</h2>
+                <p>Kenyan Haven.co is dedicated to providing quality products and services to our esteemed clients. We appreciate your consistent support and admirable cooperation.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kenyan Haven.co. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        fetch('index.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                
+                if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+                    document.querySelector('.back-button').style.display = 'none';
+                }
+            });
+    </script>
+</body>
+</html>

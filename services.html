@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenyan Haven.co - Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    
+    <?php include 'index.html'; ?>
+
+    <header>
+        <nav id="navbar">
+            <div class="logo">Kenyan Haven.co</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    
+
+    <main>
+        <section id="services" class="full-page">
+            <div class="content">
+                <h2>Our Services</h2>
+                
+                <div class="service-item">
+                    <div class="service-content">
+                        <h3>Delivery</h3>
+                        <p>Our efficient delivery service ensures that your products reach you quickly and safely. We cover a wide area and offer flexible delivery options to suit your schedule.</p>
+                    </div>
+                    <div class="service-image">
+                        <img src="Images/Deliveries.jpg" alt="Delivery Service">
+                    </div>
+                </div>
+
+                <div class="service-item reverse">
+                    <div class="service-content">
+                        <h3>Business Consulting</h3>
+                        <p>Our experienced team offers professional business consulting services to help your company grow and succeed. We provide strategic advice, market analysis, and customized solutions for your unique business needs.</p>
+                    </div>
+                    <div class="service-image">
+                        <img src="images/business-consulting.jpeg" alt="Business Consulting">
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-content">
+                        <h3>Counselling</h3>
+                        <p>Our counselling services provide support and guidance for personal and professional growth. Our qualified counsellors offer a safe, confidential space to discuss your concerns and work towards positive outcomes.</p>
+                    </div>
+                    <div class="service-image">
+                        <img src="images/counselling.jpeg" alt="Counselling Service">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kenyan Haven.co. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        fetch('index.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                
+                if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+                    document.querySelector('.back-button').style.display = 'none';
+                }
+            });
+    </script>
+</body>
+</html>
